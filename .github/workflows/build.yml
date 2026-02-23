@@ -1,7 +1,5 @@
 name: Build Minecraft Client
 
-# This tells GitHub to run the build whenever you push a change, 
-# or when you manually click a "Run" button.
 on:
   push:
     branches: [ master, main ]
@@ -9,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Uses a secure, temporary Linux server
+    runs-on: ubuntu-20.04 # Use an older server that still supports Python 2
 
     steps:
       - name: Checkout Code
@@ -21,10 +19,12 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '2.7' # Changed this from 3.10 to 2.7 
+      - name: Install Python 2
+        # We bypass the setup action and just force Linux to install Python 2 natively
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python2
+          sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 
       - name: Recompile Code
         run: python runtime/recompile.py
