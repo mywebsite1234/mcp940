@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04 # Use an older server that still supports Python 2
+    runs-on: ubuntu-22.04 # Use a currently supported GitHub server
 
     steps:
       - name: Checkout Code
@@ -20,17 +20,16 @@ jobs:
           java-version: '8'
 
       - name: Install Python 2
-        # We bypass the setup action and just force Linux to install Python 2 natively
         run: |
           sudo apt-get update
           sudo apt-get install -y python2
-          sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 
       - name: Recompile Code
-        run: python runtime/recompile.py
+        # We explicitly type 'python2' here so it doesn't accidentally use Python 3
+        run: python2 runtime/recompile.py
 
       - name: Reobfuscate Code
-        run: python runtime/reobfuscate.py
+        run: python2 runtime/reobfuscate.py
 
       - name: Upload Finished Files
         uses: actions/upload-artifact@v4
