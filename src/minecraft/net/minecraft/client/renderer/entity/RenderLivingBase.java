@@ -170,15 +170,15 @@ public abstract class RenderLivingBase<T extends EntityLivingBase> extends Rende
                 this.mainModel.setLivingAnimations(entity, f6, f5, partialTicks);
                 this.mainModel.setRotationAngles(f6, f5, f8, f2, f7, f4, entity);
 
-                if (CustomEntityModels.isActive())
-                {
-                    this.renderLimbSwing = f6;
-                    this.renderLimbSwingAmount = f5;
-                    this.renderAgeInTicks = f8;
-                    this.renderHeadYaw = f2;
-                    this.renderHeadPitch = f7;
-                    this.renderScaleFactor = f4;
-                }
+                // if (CustomEntityModels.isActive())
+                // {
+                //     this.renderLimbSwing = f6;
+                //     this.renderLimbSwingAmount = f5;
+                //     this.renderAgeInTicks = f8;
+                //     this.renderHeadYaw = f2;
+                //     this.renderHeadPitch = f7;
+                //     this.renderScaleFactor = f4;
+                // }
 
                 if (this.renderOutlines)
                 {

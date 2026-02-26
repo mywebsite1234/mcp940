@@ -223,10 +223,10 @@ public class PlayerItemParser
         modelrenderer.scaleZ = f;
         String s1 = Json.getString(p_parseModelRenderer_0_, "texture");
 
-        if (s1 != null)
-        {
-            modelrenderer.setTextureLocation(CustomEntityModelParser.getResourceLocation(p_parseModelRenderer_3_, s1, ".png"));
-        }
+        // if (s1 != null)
+        // {
+        //     modelrenderer.setTextureLocation(CustomEntityModelParser.getResourceLocation(p_parseModelRenderer_3_, s1, ".png"));
+        // }
 
         int[] aint = Json.parseIntArray(p_parseModelRenderer_0_.get("textureSize"), 2);
 

@@ -168,10 +168,10 @@ public class ModelRenderer
                 Config.getTextureManager().bindTexture(this.textureLocation);
             }
 
-            if (this.modelUpdater != null)
-            {
-                this.modelUpdater.update();
-            }
+            // if (this.modelUpdater != null)
+            // {
+            //     this.modelUpdater.update();
+            // }
 
             boolean flag = this.scaleX != 1.0F || this.scaleY != 1.0F || this.scaleZ != 1.0F;
             GlStateManager.translate(this.offsetX, this.offsetY, this.offsetZ);
@@ -296,10 +296,10 @@ public class ModelRenderer
                 Config.getTextureManager().bindTexture(this.textureLocation);
             }
 
-            if (this.modelUpdater != null)
-            {
-                this.modelUpdater.update();
-            }
+            // if (this.modelUpdater != null)
+            // {
+            //     this.modelUpdater.update();
+            // }
 
             boolean flag = this.scaleX != 1.0F || this.scaleY != 1.0F || this.scaleZ != 1.0F;
             GlStateManager.pushMatrix();

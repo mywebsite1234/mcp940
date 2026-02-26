@@ -403,11 +403,11 @@ public class RenderManager
                 {
                     render.setRenderOutlines(this.renderOutlines);
 
-                    if (CustomEntityModels.isActive())
-                    {
-                        this.renderEntity = entityIn;
-                        this.renderRender = render;
-                    }
+                    // if (CustomEntityModels.isActive())
+                    // {
+                    //     this.renderEntity = entityIn;
+                    //     this.renderRender = render;
+                    // }
 
                     render.doRender(entityIn, x, y, z, yaw, partialTicks);
                 }

@@ -247,7 +247,7 @@ public class TextureUtils
             CustomSky.update();
             RandomMobs.resetTextures();
             CustomItems.updateModels();
-            CustomEntityModels.update();
+            // CustomEntityModels.update();
             Shaders.resourcesReloaded();
             Lang.resourcesReloaded();
             Config.updateTexturePackClouds();
