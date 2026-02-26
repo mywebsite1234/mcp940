@@ -101,6 +101,10 @@ import shadersmod.client.ShadersRender;
 public class EntityRenderer implements IResourceManagerReloadListener
 {
     private static final Logger LOGGER = LogManager.getLogger();
+    
+    // --- TFARCENIM ZOOM MEMORY ---
+    public float tfarcenimZoomLevel = 4.0F; 
+    
     private static final ResourceLocation RAIN_TEXTURES = new ResourceLocation("textures/environment/rain.png");
     private static final ResourceLocation SNOW_TEXTURES = new ResourceLocation("textures/environment/snow.png");
     public static boolean anaglyphEnable;
@@ -629,7 +633,25 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
                 if (Config.zoomMode)
                 {
-                    f /= 4.0F;
+                    // --- TFARCENIM DYNAMIC ZOOM START ---
+                    int scroll = org.lwjgl.input.Mouse.getDWheel();
+                    
+                    if (scroll > 0) {
+                        this.tfarcenimZoomLevel += 1.0F;
+                    } else if (scroll < 0) {
+                        this.tfarcenimZoomLevel -= 1.0F;
+                    }
+                    
+                    // Prevent zooming out past default, or zooming in too far
+                    if (this.tfarcenimZoomLevel < 1.0F) {
+                        this.tfarcenimZoomLevel = 1.0F;
+                    }
+                    if (this.tfarcenimZoomLevel > 30.0F) {
+                        this.tfarcenimZoomLevel = 30.0F;
+                    }
+                    
+                    f /= this.tfarcenimZoomLevel;
+                    // --- TFARCENIM DYNAMIC ZOOM END ---
                 }
             }
             else if (Config.zoomMode)
@@ -639,6 +661,9 @@ public class EntityRenderer implements IResourceManagerReloadListener
                 this.mouseFilterXAxis = new MouseFilter();
                 this.mouseFilterYAxis = new MouseFilter();
                 this.mc.renderGlobal.displayListEntitiesDirty = true;
+                
+                // Reset zoom level to default when key is released
+                this.tfarcenimZoomLevel = 4.0F; 
             }
 
             if (entity instanceof EntityLivingBase && ((EntityLivingBase)entity).getHealth() <= 0.0F)
