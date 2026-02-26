@@ -11,9 +11,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
-import net.optifine.entity.model.IEntityRenderer;
+// import net.optifine.entity.model.IEntityRenderer;
 
-public abstract class TileEntitySpecialRenderer<T extends TileEntity> implements IEntityRenderer
+public abstract class TileEntitySpecialRenderer<T extends TileEntity>
 {
     protected static final ResourceLocation[] DESTROY_STAGES = new ResourceLocation[] {new ResourceLocation("textures/blocks/destroy_stage_0.png"), new ResourceLocation("textures/blocks/destroy_stage_1.png"), new ResourceLocation("textures/blocks/destroy_stage_2.png"), new ResourceLocation("textures/blocks/destroy_stage_3.png"), new ResourceLocation("textures/blocks/destroy_stage_4.png"), new ResourceLocation("textures/blocks/destroy_stage_5.png"), new ResourceLocation("textures/blocks/destroy_stage_6.png"), new ResourceLocation("textures/blocks/destroy_stage_7.png"), new ResourceLocation("textures/blocks/destroy_stage_8.png"), new ResourceLocation("textures/blocks/destroy_stage_9.png")};
     protected TileEntityRendererDispatcher rendererDispatcher;

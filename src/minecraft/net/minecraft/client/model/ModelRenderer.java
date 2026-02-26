@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.src.Config;
 import net.minecraft.src.ModelSprite;
 import net.minecraft.util.ResourceLocation;
-import net.optifine.entity.model.anim.ModelUpdater;
+// import net.optifine.entity.model.anim.ModelUpdater;
 
 public class ModelRenderer
 {
@@ -56,7 +56,7 @@ public class ModelRenderer
     private float savedScale;
     private ResourceLocation textureLocation;
     private String id;
-    private ModelUpdater modelUpdater;
+    // private ModelUpdater modelUpdater;
     private RenderGlobal renderGlobal;
 
     public ModelRenderer(ModelBase model, String boxNameIn)
@@ -533,10 +533,10 @@ public class ModelRenderer
         }
     }
 
-    public void setModelUpdater(ModelUpdater p_setModelUpdater_1_)
-    {
-        this.modelUpdater = p_setModelUpdater_1_;
-    }
+    // public void setModelUpdater(ModelUpdater p_setModelUpdater_1_)
+    // {
+    //     this.modelUpdater = p_setModelUpdater_1_;
+    // }
 
     public String toString()
     {

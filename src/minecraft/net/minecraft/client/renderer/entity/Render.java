@@ -23,10 +23,10 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.optifine.entity.model.IEntityRenderer;
+// import net.optifine.entity.model.IEntityRenderer;
 import shadersmod.client.Shaders;
 
-public abstract class Render<T extends Entity> implements IEntityRenderer
+public abstract class Render<T extends Entity>
 {
     private static final ResourceLocation SHADOW_TEXTURES = new ResourceLocation("textures/misc/shadow.png");
     protected final RenderManager renderManager;

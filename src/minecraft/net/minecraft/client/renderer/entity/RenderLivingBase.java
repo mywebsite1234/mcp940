@@ -19,7 +19,7 @@ import net.minecraft.src.Config;
 import net.minecraft.src.Reflector;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.TextFormatting;
-import net.optifine.entity.model.CustomEntityModels;
+// import net.optifine.entity.model.CustomEntityModels;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import shadersmod.client.Shaders;

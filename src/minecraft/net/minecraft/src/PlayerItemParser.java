@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.util.ResourceLocation;
-import net.optifine.entity.model.CustomEntityModelParser;
+// import net.optifine.entity.model.CustomEntityModelParser;
 
 public class PlayerItemParser
 {

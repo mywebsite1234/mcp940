@@ -28,7 +28,7 @@ import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.client.resources.IResourceManagerReloadListener;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
-import net.optifine.entity.model.CustomEntityModels;
+// import net.optifine.entity.model.CustomEntityModels;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
